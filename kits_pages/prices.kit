@@ -1,0 +1,77 @@
+<!-- @import '../kits/_head.kit' -->
+<!-- @import '../kits/_menu.kit' -->
+<script>document.getElementById("prices").classList.add("active");</script>  <!-- set this page active -->
+
+<div class="pageheader container">
+    <div class="fleft">Prices</div>
+    <div class="fright">
+            <div id="markethealth" class="health" style="float:right; text-align:right; overflow: hidden"></div>
+    </div>
+</div>
+
+<!-- @import '../kits_section/_loader.kit' -->
+<!-- @import '../kits_section/_popup.kit' -->
+
+
+<!-- the tabs -->
+<div class="w3-container">
+    <div class="w3-row">
+
+        <a href="javascript:void(0)" onclick="openprice(event, 'Watchlist');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding w3-border-red"><img src="./images/svg/star.svg" class="menuimg" /></div>
+        </a>
+
+        <a href="javascript:void(0)" onclick="openprice(event, 'Top10');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><img src="./images/svg/pricegold.svg" class="menuimg" /></div>
+        </a>
+
+        <a href="javascript:void(0)" onclick="openprice(event, 'ShowAll');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><img src="./images/svg/bluesearch.svg" class="menuimg" /></div>
+        </a>
+    </div>
+</div>
+
+    <!-- the tabs -->
+
+    <div id="Top10" class="w3-container price" style="display:none">
+            <div class="section-first">
+            <h2 id="Top10lbl">Top 10 by Market Cap</h2>
+                    <div class="section">
+                <div id="Top10Table"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Watchlist" class="w3-container price">
+            <div class="section-first">
+            <h2 id="Watchlistlbl">Watchlist</h2>
+                                <div class="section">
+            <div id="WatchlistTable"></div>
+        </div>
+    </div>
+</div>
+
+<div id="ShowAll" class="w3-container price" style="display:none">
+            <div class="section-first">
+        <h2 id="AllCoinlbl">All Coins</h2>
+        <div class="">
+        <input type="text" onfocus="this.value=''" id="myInput" onkeyup="searchtable()" placeholder="Type name or symbol.." title="Type in a coin name or symbol" />
+           <button class="smallbtn" id="myinputclearbtn" onclick="clearinput('myInput')">
+             <img src="./images/svg/x.svg" class="menuimg" /></button>  
+                </div>               
+        <div class="section">
+        <div id="AllCoinsTable"> </div>
+    </div>
+</div>
+</div>
+
+
+<script>
+        loadalltables();
+</script>
+
+<!-- something at the bottom -->
+<div class="section-last"><p><a href="https://coinmarketcap.com/api/">Data provided by CoinMarketCap </a></p></div>
+
+
+<!-- @import '../kits/_tail.kit' -->

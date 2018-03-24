@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <link rel="icon" href="./images/logo.png" sizes="16x16" type="image/png">
+    <link href="./css/site.css" rel="stylesheet">
+    <script type="text/javascript" src="./js/settings.js"></script>
+    <script type="text/javascript" src="./js/coin.js"></script>
+    <script type="text/javascript" src="./js/sortable-dist.js"></script>
+</head>
+
+<body>
+    <div class="pageouter">
+        <div class="pageinner">
+        
+            <!-- set the active menu to match the page -->
+            <div class="topnav-outer">
+                <div class="topnav" id="myTopnav">
+                    <a id="prices" href="./prices.html"><img src='./images/svg/pricegold.svg' class='menuimg'> Prices</a>
+
+                    <a id="downloads" href="./downloads.html"><img src='./images/svg/downloadgold.svg' class='menuimg'> Download</a>
+                    <a id="settings" href="./settings.html"><img src='./images/svg/settinggold.svg' class='menuimg'> Settings</a>
+                    <a href="javascript:void(0);" class="icon" onclick="menu()">&#9776;</a>
+                </div>
+            </div>
+<script>document.getElementById("prices").classList.add("active");</script>  <!-- set this page active -->
+
+<div class="pageheader container">
+    <div class="fleft">Prices</div>
+    <div class="fright">
+            <div id="markethealth" class="health" style="float:right; text-align:right; overflow: hidden"></div>
+    </div>
+</div>
+
+<!-- hidden loading gif kit-->
+<div class="section" id="spinner" style="display:none; text-align:center;">
+    <img src="./images/loader.gif">
+</div>
+
+
+<!-- popup kit -->
+<div id="popup1" class="overlay" style="display:none;">
+	<div class="popup">
+		<h3>Coin Data</h3>
+		<a class="closemodal" href="#">&times;</a>
+		<div class="content" id="coindata">
+	put the coin specific stuff here.
+		</div>
+	</div>
+</div>
+<!-- popup kit -->
+
+
+
+
+<!-- the tabs -->
+<div class="w3-container">
+    <div class="w3-row">
+
+        <a href="javascript:void(0)" onclick="openprice(event, 'Watchlist');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding w3-border-red"><img src="./images/svg/star.svg" class="menuimg" /></div>
+        </a>
+
+        <a href="javascript:void(0)" onclick="openprice(event, 'Top10');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><img src="./images/svg/pricegold.svg" class="menuimg" /></div>
+        </a>
+
+        <a href="javascript:void(0)" onclick="openprice(event, 'ShowAll');">
+            <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding"><img src="./images/svg/bluesearch.svg" class="menuimg" /></div>
+        </a>
+    </div>
+</div>
+
+    <!-- the tabs -->
+
+    <div id="Top10" class="w3-container price" style="display:none">
+            <div class="section-first">
+            <h2 id="Top10lbl">Top 10 by Market Cap</h2>
+                    <div class="section">
+                <div id="Top10Table"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Watchlist" class="w3-container price">
+            <div class="section-first">
+            <h2 id="Watchlistlbl">Watchlist</h2>
+                                <div class="section">
+            <div id="WatchlistTable"></div>
+        </div>
+    </div>
+</div>
+
+<div id="ShowAll" class="w3-container price" style="display:none">
+            <div class="section-first">
+        <h2 id="AllCoinlbl">All Coins</h2>
+        <div class="">
+        <input type="text" onfocus="this.value=''" id="myInput" onkeyup="searchtable()" placeholder="Type name or symbol.." title="Type in a coin name or symbol" />
+           <button class="smallbtn" id="myinputclearbtn" onclick="clearinput('myInput')">
+             <img src="./images/svg/x.svg" class="menuimg" /></button>  
+                </div>               
+        <div class="section">
+        <div id="AllCoinsTable"> </div>
+    </div>
+</div>
+</div>
+
+
+<script>
+        loadalltables();
+</script>
+
+<!-- something at the bottom -->
+<div class="section-last"><p><a href="https://coinmarketcap.com/api/">Data provided by CoinMarketCap </a></p></div>
+
+
+<!-- page content above this line -->
+   </div>
+
+<!-- footer kit -->
+<div id="footer"></div>
+    <script>addfooter();</script>
+
+</body>
+</html>

@@ -1,0 +1,694 @@
+// colour scheme
+@white: #fff;
+@black: #000;
+@gold: #D4AF37;
+
+// structures
+@structure: rgb(73, 87, 105);
+@plain: #f8f8f8;
+@plain1: #fefefe;
+@border: #ccc;
+@grey-light: #FAFAFA;
+@pale: #f8f8f8;
+@grey-dark: rgb(199, 199, 199);
+@overlay: rgba(0, 0, 0, 0.6);
+
+// highlights
+@down: #a72323;
+@up: #27a527;
+
+// inputs and cta
+@cta: #C8102E;
+@ctahover: @cta + #321;
+
+@redbtn: @cta;
+@greenbtn: #27a527;
+@textdark: #1e1e1e;
+@textlight: #fffdfd;
+@inputhighlight: #40ef1f;
+
+// tables
+@tableheader: rgb(78, 99, 124);
+@row: white;
+@row1: white;
+@row2: #FAFAFA;
+
+
+
+html, body { font-size: 16px; }
+
+* {
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    color: @textdark;
+    overflow-x: hidden;
+}
+
+body {
+    font-weight: 400;
+    letter-spacing: 0;
+    margin: 0px 0px;
+    font-size: 1.0rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    padding: 5px 10px 5px 10px;
+    font-weight: normal;
+    margin: 0px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    letter-spacing: 0;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    letter-spacing: 0;
+}
+
+h4 {
+    font-weight: 450;
+    font-size: 1.0rem;
+    line-height: 1.1rem;
+    letter-spacing: 0;
+}
+
+P {
+    padding: 5px 10px;
+    margin: 5px 10px 5px 10px;
+    margin: 0px;
+    font-size: 0.8rem;
+}
+
+strong {
+    font-weight: 700;
+}
+
+button {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    padding: 5px 10px;
+    cursor: pointer;
+        border-radius: 4px;
+    outline: none;
+    background-color: @greenbtn;
+    border-color: @greenbtn + #111;
+    color: @white;
+}
+button:hover {
+    background-color: @greenbtn + #121;
+}
+
+.btnred {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    background-color: @cta;
+    border-color:  @cta + #321;
+    color: @white;
+}
+.btnred:hover {
+    background-color:  @ctahover;
+}
+
+.smallbtn {
+    font-size: 0.8rem;
+    line-height: 1.0rem;
+    padding: 3px 3px;
+    border-radius: 1px;
+}
+
+.coininputbox {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin: 0px 15px;   
+    padding: 5px 15px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid @inputhighlight;
+    border-radius: 4px;
+    color: @textdark;
+    max-width: 80px;
+}
+
+
+.pageouter {
+    margin: auto;
+    margin-top: 0px;
+    width: 100%;
+}
+
+.pageinner {
+    padding: 0px 5px 0px 0px;
+    width: 100%;
+    margin: auto;
+}
+
+.pageheader {
+    top:48px;
+    background-color: @white;
+    margin: 48px 5px 10px 10px;
+    padding: 0px 0px 0px 0px;
+    width:100%;
+}
+
+.section {
+    background-color: @plain;
+    margin: 0px 0px 10px 0px;
+    padding: 10px 10px 10px 10px;
+    float:none;
+    border-radius: 8px;
+}
+
+.section-first {
+    background-color:@plain;
+    margin: 0px 0px 3px 0px;
+    padding: 8px 0px 10px 0px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.section-last {
+    background-color: @plain;
+    margin: 15px 0px 35px 0px;
+    padding: 10px 10px 10px 10px;
+}
+
+.section-plain {
+    background-color: @plain;
+    margin: 15px 0px 15px 0px;
+    padding: 10px 10px 10px 10px;
+}
+
+.spinner {
+    margin: 0px 10px 0px 10px;
+    background-color: @plain;
+    text-align: center;
+}
+
+.footer {
+    position: fixed;
+    padding: 5px 10px 5px 10px;
+    background-color: @structure;
+    color: @gold;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    font-size: 0.7rem;
+}
+
+.footer-R-inner {
+    text-align: right;
+    float: right;
+}
+
+.footer-L-inner {
+    color: @gold;
+    text-align: left;
+    float: left;
+}
+
+.footer a {
+    display: block;
+    color: @gold;
+    text-align: right;
+    text-decoration: none;
+}
+
+.fleftpannel {
+    float: left;
+    padding: 10px 0px 0px 0px;
+    margin: 5px 10px 5px 10px;
+    border: 1px solid @grey-dark;
+    font-size: 1.4rem;
+ background-color: @plain;   
+}
+
+
+.fleft {
+    float: left;
+    padding: 10px 0px 0px 0px;
+    margin: 5px 10px 5px 10px;
+    font-size: 1.4rem;
+}
+.fright {
+    padding: 10px 10px 0px 0px;
+    overflow: hidden;
+    text-align: right;
+    font-size: 1.4rem;
+}
+
+
+/*  search a table */
+
+.cleargroup {
+    float: left;
+
+}
+
+#myInput {
+    background-image: url(../images/search.png);
+    background-position: 4px 4px;
+    background-repeat: no-repeat;
+    font-size: 1.1rem;
+    padding: 10px 0px 10px 46px;
+    border: 1px solid @inputhighlight;
+    border-radius: 4px;
+    margin: 10px 2px 5px 15px;
+    cursor: pointer;
+    float: left;
+    width:250px;
+}
+
+#myinputclearbtn {
+    padding: 10px 0px 10px 1px;
+    margin: 10px 2px 5px 1px;
+    width: 42px;
+    float: left;
+}
+
+
+.input {
+    font-size: 1.2rem;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid @inputhighlight;
+    margin: 0px 12px 10px 5px;
+    cursor:pointer;
+} 
+.radio {
+    margin: 0px 0px 10px 5px;
+    cursor:pointer;
+}
+.radiolabel {
+    font-size: 1.0rem;
+    margin: 10px 10px 10px 0px;
+    cursor:pointer;
+}
+.coin-list {
+    font-size: 1.2rem;
+    margin: 10px 20px 10px 0px;
+    cursor:pointer;
+}
+
+/* .clearable{
+  background:url(../images/search.png) no-repeat right -10px center;
+  border:1px solid #999;
+  padding:3px 18px 3px 4px; /* USE the same right padding in jQ!
+  border-radius:3px;
+  transition: background 0.4s;.
+} 
+.clearable.x{
+  background-position: right 5px center;
+}
+.clearable.onX{
+  cursor:pointer;
+}	
+*/
+
+.health {
+    font-size: 01.0rem;
+}
+
+/*  coin and other icons */
+
+.img20 {
+      width:20px;
+    height: 20px;  
+}
+
+.img32 {
+    width:32px;
+    height: 32px;
+}
+
+.img40 {
+    width:50px;
+    height: 50px;
+    margin: 12px 0px;
+}
+
+.smallbr {
+    padding: 0 0;
+    margin: 0 0;
+}
+
+// popup modal window
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(0, 0, 0); /* fallback if needed */
+  background: @overlay;
+  transition: opacity 500ms;
+  opacity: 1;
+}
+
+.popup {
+  margin: 120px auto;
+  padding: 10px;
+  background: @plain1;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 600px;
+  min-width: 320px;
+  height: auto;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h3 {
+  margin-top: 0;
+}
+.closemodal {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgba(99, 99, 99, 0.55);
+}
+.closemodal:hover {
+  color: @ctahover;
+  cursor: pointer;
+}
+
+.popup .content {
+  max-height: 90%;
+  overflow: auto;
+}
+
+.popup .title {
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    text-align:center;
+    padding:12px 0;
+    float:left;  
+  }
+
+  .popup .changedata {
+    font-size: 1.2rem;
+    width:33%;
+    padding:12px 0;
+    text-align:center;
+    float:left;
+  }
+
+.popup .isUp {
+    color: @up;
+    font-size: 1.2rem;
+  }
+.popup .isDown {
+    color: @down;
+    font-size: 1.2rem;
+  }
+ 
+.frame {
+    border-top: 1px solid #E4E6EB;
+  }
+
+/*/ tabs <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">/*/
+.w3-container:after,
+.w3-container:before,
+.w3-panel:after,
+.w3-panel:before,
+.w3-row:after,
+.w3-row:before,
+.w3-row-padding:after,
+.w3-row-padding:before,
+.w3-cell-row:before,
+.w3-cell-row:after,
+.w3-clear:after,
+.w3-clear:before,
+.w3-bar:before,
+.w3-bar:after {
+    content: "";
+    display: table;
+    clear: both;
+    background-color:@white;
+}
+.w3-container,
+.w3-panel {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 3px;    
+    width:100%;
+
+}
+
+.w3-row-padding,
+.w3-row-padding, .w3-half,
+.w3-row-padding, .w3-third,
+.w3-row-padding, .w3-twothird,
+.w3-row-padding, .w3-threequarter,
+.w3-row-padding, .w3-quarter,
+.w3-row-padding, .w3-col {
+    padding: 0px 8px;
+}
+
+.w3-col,
+.w3-half,
+.w3-third,
+.w3-twothird,
+.w3-threequarter,
+.w3-quarter {
+    float: left;
+    width: 100%;
+    border-color: @border;
+    background-color:@white;
+}
+
+.w3-col.m4,
+.w3-third {
+    width: 26%;
+    max-width: 125px;
+    font-size: 1.0rem;
+    font-weight: 600;
+    text-align: center;
+    border-style: solid;
+    border-width: thin;
+}
+
+.w3-bottombar {
+    border-bottom: 6px solid @plain; 
+}
+
+.w3-light-grey,
+.w3-hover-light-grey:hover,
+.w3-light-gray,
+.w3-hover-light-gray:hover {
+    color: @textdark !important;
+    background-color: @grey-light !important;
+}
+
+.w3-border-red,
+.w3-hover-border-red:hover {
+    border-color: @cta!important;
+    background-color: @plain;
+}
+
+
+.w3-padding {
+    padding: 8px 16px !important
+}
+
+// menu  *****************************************
+
+#header {
+    color: @structure;
+   }
+    
+   .topnav-outer {
+     position: fixed;
+     left:0px; 
+     top:0px; 
+     width:100%;
+     margin:auto;
+     margin-bottom:40px;
+   }
+   
+   .topnav {
+     overflow: hidden;
+     background-color: @structure;
+     margin:auto;
+     min-width:412px;
+   }
+   
+   .topnav a {
+     float: left;
+     display: block;
+     color: @gold;
+     text-align: center;
+     padding: 12px 8px;
+     text-decoration: none;
+     font-size: 1.0rem;
+     font-weight: 700;
+     min-width: 65px;
+
+   }
+   
+   .menuimg {
+       height: 18px;
+   }
+   
+   .topnav a:hover {
+     background-color: @structure + #111;
+   }
+   
+   .active {
+     background-color:  @structure + #222;
+   }
+   
+   .topnav .logo {
+       width: 35px;
+       margin: 5px;
+       float: right;
+     }
+   
+   .topnav .icon {
+     display: none;
+   }
+   
+
+// tables  *************************************
+
+
+table {
+    border: 1px solid @border;
+    border-collapse: collapse;
+    margin: auto;
+    padding: 0;
+    width: 98%;
+    table-layout: fixed;
+  }
+
+  table caption {
+    font-size: 1.2rem;
+    margin: .5em 0 .75em;
+  }
+
+  table tr {
+    background: @row;
+    border: 1px solid @border;
+    padding: .35em;
+  }
+
+  table th,
+  table td {
+    padding: .625em;
+    text-align: left;
+  }
+
+
+  table td a {
+    text-decoration: none;
+  }
+
+th.narrow, td.narrow {
+    width: 11%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+// hiddin for mobile
+
+
+.hidemobile {
+    display: none;
+  }
+
+  th.narrow,  td.narrow {
+    width: 10%;
+    font-size: 1.0rem;
+    text-align: center;
+  }
+
+  th.mid,  td.mid {
+    width: 20%;
+    font-size: 1.0rem;
+    text-align: center;
+  }
+
+  th.wide,  td.wide {
+    width: 50%;
+    font-size: 1.1rem;
+  }
+
+  td.isUp {
+    color: @up;
+  }
+  td.isDown {
+    color: @down;
+  }
+  table.summary {
+     margin: auto auto 8px 10px;
+     width:90%;
+     max-width: 400px;
+}
+
+table.summary  th {
+  font-size: 0.7rem;
+  letter-spacing: .1em;
+  text-align:center;
+}
+table.summary td {
+  text-align:center;
+  padding: 10px 0px;
+}
+
+
+  table th {
+    font-size: 0.7rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    background-color: @tableheader;
+    color: @white;
+  }
+
+  table.sortable th {
+    cursor: pointer;
+  }
+
+
+  table.sortable tbody tr:nth-child(2n) td {
+    background: @row1;
+  }
+
+  table.sortable tbody tr:nth-child(2n+1) td {
+    background: @row2;
+  }
+
+
+
+/* ------------------------------------------------------- */
+
+@media (min-width: 768px) {
+    
+    .hidemobile {
+      display: table-cell;
+    }
+  
+}
