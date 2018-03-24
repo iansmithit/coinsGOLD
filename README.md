@@ -1,6 +1,6 @@
 # coinsGOLD
 Single cryptocoin API site - prices
-Shows coin proces using the conmarketcp ticker API
+Shows coin prices using the conmarketcp ticker API
 You can: 
   Save a list of favourites
   Search all coins and tokens
